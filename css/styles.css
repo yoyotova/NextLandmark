@@ -117,3 +117,8 @@ body {
 .auth-link:focus {
   text-decoration: underline;
 }
+
+.errors {
+  font-family: 'Didact Gothic', sans-serif;;
+  color: red;
+}
