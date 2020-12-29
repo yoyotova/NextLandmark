@@ -34,7 +34,7 @@ const validatePassword = password => {
 };
 
 [registerFormElement, loginFormElement].forEach(form => {
-  if (form) {
+  form &&
     form.addEventListener("submit", event => {
       event.preventDefault();
   
@@ -50,5 +50,4 @@ const validatePassword = password => {
       }
     
     });
-  }
 });

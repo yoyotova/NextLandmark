@@ -20,7 +20,7 @@ body {
   font-size: 0.875rem;
 }
 
-body {
+.welcome {
   background-image: url("./background.jpg");
   height: 100%; 
   background-position: center;
@@ -121,4 +121,55 @@ body {
 .errors {
   font-family: 'Didact Gothic', sans-serif;;
   color: red;
+}
+
+.landmark {
+  background-color: #7b7f82;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.posts-header {
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.125rem;
+  height: 3.25rem;
+}
+
+.posts-page-header {
+  font-size: 2.625rem;
+  font-weight: 100;
+}
+
+.posts-search {
+  width: 100%;
+  max-width: 15rem;
+  position: relative;
+}
+
+.posts-search input {
+  background-color: #D7D9DD;
+  border: 1px solid #EAECFE;
+  border-radius: 15px;
+  height: 2rem;
+  padding-left: 14px
+}
+
+.content {
+  padding: 17px 22%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 5rem;
+}
+
+img {
+  max-width: 500px;
+  max-height: 500px;
 }
