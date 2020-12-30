@@ -17,15 +17,31 @@
           <img src="${itm.img}">
           <p>${itm.description}</p>
           <div class="add-favorite">
-            <i class="fa fa-heart"></i>
+            <button class="fa fa-heart fav-btn"></button>
             <p> Добави в любими </p>
           </div>
           `;
         document.getElementById('landmarks').innerHTML += info;
+
+        let favIcons = document.querySelectorAll(".fav-btn");
+        favIcons.forEach(favIcon => {
+          favIcon.addEventListener("click", () => {
+            if (favIcon.style.color === "red") {
+              favIcon.style.color = "black";
+            } else {
+              favIcon.style.color = "red";
+            }
+          });
+        })
+
       }, this);
     }
+
   }
 
   xhr.send();
-	
+
+
+
 })(this);
+
