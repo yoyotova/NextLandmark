@@ -15,7 +15,6 @@ body,
 
 body {
   background: linear-gradient(90deg, rgba(255,255,255,1) 32%, rgba(193,198,203,1) 100%);
-  background-repeat: no-repeat;
   color: #333;
   font-size: 0.875rem;
 }
@@ -123,8 +122,11 @@ body {
   color: red;
 }
 
+.landmarks > :not(:first-child) {
+  margin-top: 25px;
+}
+
 .landmark {
-  background-color: #7b7f82;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,7 +134,20 @@ body {
   gap: 5px;
 }
 
-.posts-header {
+.location-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.landmark h3 {
+  font-size: 2rem;
+}
+
+.landmark > * {
+  font-size: 1rem;
+}
+
+.header {
   background-color: #fff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
   display: flex;
@@ -142,23 +157,47 @@ body {
   height: 3.25rem;
 }
 
-.posts-page-header {
+.page-header {
   font-size: 2.625rem;
   font-weight: 100;
 }
 
-.posts-search {
+.search {
   width: 100%;
   max-width: 15rem;
   position: relative;
 }
 
-.posts-search input {
+.search input {
   background-color: #D7D9DD;
   border: 1px solid #EAECFE;
-  border-radius: 15px;
+  width: 100%;
+  padding: 1rem;
+  padding-right: 2.5rem;
   height: 2rem;
-  padding-left: 14px
+  border-radius: 1rem;
+}
+
+.search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 1rem;
+}
+
+.add-favorite {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.add-favorite button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .content {
@@ -172,4 +211,11 @@ body {
 img {
   max-width: 500px;
   max-height: 500px;
+}
+
+@media (max-width: 890px) {
+  .content {
+    padding: 17px 17%;
+    width: 90%;
+  }
 }
