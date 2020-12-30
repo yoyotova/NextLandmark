@@ -6,6 +6,8 @@ const passwordElement = document.querySelector(".auth-input[name=password]");
 const usernameElement = document.querySelector(".auth-input[name=username]");
 const errorElement = document.getElementById("errors");
 
+const logoutBtn = document.getElementById("logout-btn");
+
 const validateEmail = email => {
   const notEmpty = !!email.length;
   const hasEmailSign = email.includes("@");
@@ -50,4 +52,8 @@ const validatePassword = password => {
       }
     
     });
+});
+
+logoutBtn && logoutBtn.addEventListener("click", () => {
+  window.location = "index.html"
 });
