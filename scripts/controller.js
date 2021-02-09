@@ -48,7 +48,7 @@ const validatePassword = password => {
   
   
       if (hasValidEmail && hasValidPassword) {
-        window.location = "/home";
+        window.location = "home.html";
       }
     
     });
