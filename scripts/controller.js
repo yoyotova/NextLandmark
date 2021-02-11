@@ -45,7 +45,10 @@ const validatePassword = password => {
   
       let hasValidEmail = validateEmail(emailValue);
       let hasValidPassword = validatePassword(passwordValue);
-  
+
+      // if(errorElement.innerText) {
+      //   errorElement.innerText = "Invalid email/password.";
+      // }
   
       if (hasValidEmail && hasValidPassword) {
         window.location = "home.html";

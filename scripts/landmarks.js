@@ -6,7 +6,7 @@
     if(xhr.readyState == 4 && xhr.status == 200) {
       var landmark = JSON.parse(xhr.responseText);
       let info = "";
-      landmark.map((itm,idx) => {
+      landmark.map((itm) => {
         info = "";
         info += `
           <article>
@@ -17,13 +17,14 @@
                 <span>${itm.location}</span>
               </div>
               <img src="${itm.img}">
-              <p>${itm.description}</p>
+              <p class="item-description">${itm.description}</p>
               <div class="add-favorite">
                 <button class="fa fa-heart fav-btn"></button>
                 <p> Добави в любими </p>
               </div>
             </div>
           </article>
+          <hr>
           `;
         document.getElementById('landmarks').innerHTML += info;
 
